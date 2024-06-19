@@ -1,6 +1,23 @@
 import java.util.Scanner;
 
 public class Main {
+
+    public static double add(double x, double y){
+        return x + y;
+    }
+    public static double sub(double x, double y){
+        return x - y;
+    }
+    public static double mult(double x, double y){
+        return x * y;
+    }
+    public static double div(double x, double y){
+        return x / y;
+    }
+    public static double mod(double x, double y){
+        return x % y;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Welcome to My Calculator");
@@ -9,7 +26,27 @@ public class Main {
         System.out.println("Inter two numbers to calculate:");
         int firstNum = sc.nextInt();
         int secondNum = sc.nextInt();
-        System.out.println(firstNum + secondNum);
+        double result = 0;
+        switch (op){
+            case "+":
+                result = add(firstNum, secondNum);
+                break;
+            case "-":
+                result = sub(firstNum, secondNum);
+                break;
+            case "*":
+                result = mult(firstNum, secondNum);
+                break;
+            case "/":
+                result = div(firstNum, secondNum);
+                break;
+            case "%":
+                result = mod(firstNum, secondNum);
+                break;
+            default:
+                System.out.println("Please enter one of the characters above");
+        }
+        System.out.println(result);
 
 
     }
