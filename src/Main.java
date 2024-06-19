@@ -5,8 +5,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Welcome to My Calculator");
         System.out.println("Inter two numbers to add:");
-        int firstNum = sc.nextInt();
-        int secondNum = sc.nextInt();
+        double firstNum = sc.nextDouble();
+        double secondNum = sc.nextDouble();
         System.out.println(firstNum + secondNum);
 
 
